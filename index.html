@@ -20,69 +20,59 @@
                 <li class="shop-cart">Корзина</li>
             </ul>
         </nav>
-        <section class="nerds-slider">
-            <input type="radio" name="main-slider" id="slider1" checked="checked">
-            <label for="slider1"></label>
-            <div class="slider-content">
-                <div class="slider-title">
-                    <b>Долго, дорого, скурпулезно</b>
-                    <p>Математически выверенный дизайн для вашего сайта или приложения.</p>
-                    <a href="#">Узнать больше</a>
-                </div>
-                <img src="http://placehold.it/698x413" width="698" height="413" alt="Пример работы">
-            </div>
-            <input type="radio" name="main-slider" id="slider2">
-            <label for="slider2"></label>
-            <div class="slider-content">
-                <div class="slider-title">
-                    <b>Любим математику как никто другой</b>
-                    <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-                    <a href="#">Узнать больше</a>
-                </div>
-                <img src="http://placehold.it/698x413" width="663" height="430" alt="Пример работы">
-            </div>
-            <input type="radio" name="main-slider" id="slider3">
-            <label for="slider3"></label>
-            <div class="slider-content">
-                <div class="slider-title">
-                    <b>Только ночь, только хардкор</b>
-                    <p>Работать днем как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-                    <a href="#">Узнать больше</a>
-                </div>
-                <img src="http://placehold.it/698x413" width="759" height="411" alt="Пример работы">
-            </div>
-        </section>
     </header>
+    <section class="nerds-slider">
+        <label for="slider1"></label>
+        <div class="slider-content">
+            <div class="slider-title">
+                <h2>Долго, дорого, скурпулезно</h2>
+                <p>Математически выверенный дизайн для вашего сайта или приложения.</p>
+                <a href="#">Узнать больше</a>
+            </div>
+            <img src="http://placehold.it/698x413" width="698" height="413" alt="Пример работы">
+        </div>
+        <label for="slider2"></label>
+        <div class="slider-content">
+            <div class="slider-title">
+                <h2>Любим математику как никто другой</h2>
+                <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+                <a href="#">Узнать больше</a>
+            </div>
+            <img src="http://placehold.it/698x413" width="663" height="430" alt="Пример работы">
+        </div>
+        <label for="slider3"></label>
+        <div class="slider-content">
+            <div class="slider-title">
+                <h2>Только ночь, только хардкор</h2>
+                <p>Работать днем как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+                <a href="#">Узнать больше</a>
+            </div>
+            <img src="http://placehold.it/698x413" width="759" height="411" alt="Пример работы">
+        </div>
+        <input type="radio" name="main-slider" id="slider1" checked="checked">
+        <input type="radio" name="main-slider" id="slider2">
+        <input type="radio" name="main-slider" id="slider3">
+    </section>
     <main class="container">
         <h1 class="visually-hidden">Студия Нёрдс</h1>
         <section class="nerds-services">
             <h2 class="visually-hidden">Наши услуги</h2>
-            <ul>
-                <li>
-                    <h3>Веб-сайты</h3>
-                    <p class="nerds-service-image">
-                        <img src="http://placehold.it/300x146" width="300" height="146" alt="Веб-сайты">
-                    </p>
+            <div class="service-item">
+                <h3>Веб-сайты</h3>
+                <p class="nerds-service-image">
                     <p class="nerds-service-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
                     <a class="button" href="#">Заказать</a>
-                </li>
-                <li>
-                    <h3>Приложения</h3>
-                    <p class="nerds-service-image">
-                        <img src="http://placehold.it/300x146" width="300" height="146" alt="Приложения">
-                    </p>
-                    <p class="nerds-service-description">Покорите топ-10 приложений в AppStore и Google Play!</p>
-                    <a class="button" href="#">Заказать</a>
-                </li>
-                <li>
-                    <h3>Презентации</h3>
-                    <p class="nerds-service-image">
-                        <img src="http://placehold.it/300x146" width="300" height="146" alt="Призентации">
-                    </p>
-                    <p class="nerds-service-description">Покорите топ-10 приложений в AppStore и Google Play!</p>
-                    <a class="button" href="#">Заказать</a>
-                </li>
-            </ul>
+            </div>
+            <div class="service-item">
+                <h3>Приложения</h3>
+                <p class="nerds-service-description">Покорите топ-10 приложений в AppStore и Google Play!</p>
+                <a class="button" href="#">Заказать</a>
+            </div>
+            <div class="service-item">
+                <h3>Презентации</h3>
+                <p class="nerds-service-description">Покорите топ-10 приложений в AppStore и Google Play!</p>
+                <a class="button" href="#">Заказать</a>
+            </div>
         </section>
         <section class="nerds-studio-description">
             <h2 class="visually-hidden">О нашей студии</h2>
@@ -142,16 +132,16 @@
             </div>
         </section>
     </main>
-    <footer class="main-footer">
-        <div class="footer-contacts">
-            <div class="adress">
-                <h3>Nёrds design studio</h3>
-                <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-                <p>Телефон: +7 (812) 666-02-66</p>
-                <a href="#">Как нас найти?</a>
-            </div>
-            <div class="map-marker"></div>
+    <section class="contacts">
+        <div class="adress">
+            <h3>Nёrds design studio</h3>
+            <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+            <p>Телефон: +7 (812) 666-02-66</p>
+            <a href="#">Как нас найти?</a>
         </div>
+        <div class="map-marker"></div>
+    </section>
+    <footer class="main-footer">
         <div class="footer-social">
             <p><b>Давайте дружить, это выгодно!</b></p>
             <p>Скидка 10% для друзей из социальных сетей</p>
