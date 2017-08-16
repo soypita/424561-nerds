@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>Nёrds-Shop</title>
 </head>
@@ -30,7 +30,7 @@
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                 <fieldset>
-                    <legend>Стоймость:</legend>
+                    <legend class="filter-title">Стоймость:</legend>
                     <div class="price-selector"></div>
                     <label>От
                         <input class="price-field" type="number" name="min-price" value="0">
@@ -40,7 +40,7 @@
                     </label>
                 </fieldset>
                 <fieldset>
-                    <legend>Сетка:</legend>
+                    <legend class="filter-title">Сетка:</legend>
                     <ul>
                         <li class="filter-option">
                             <label>
@@ -63,7 +63,7 @@
                     </ul>
                 </fieldset>
                 <fieldset>
-                    <legend>Особенности:</legend>
+                    <legend class="filter-title">Особенности:</legend>
                     <ul>
                         <li class="filter-option">
                             <label>
@@ -106,13 +106,13 @@
                 <p>Сортировать:</p>
                 <ul>
                     <li>
-                        <a href="#">По цене</a>
+                        <a class="sort-option" href="#">По цене</a>
                     </li>
                     <li>
-                        <a href="#">По типу</a>
+                        <a class="sort-option" href="#">По типу</a>
                     </li>
                     <li>
-                        <a href="#">По названию</a>
+                        <a class="sort-option" href="#">По названию</a>
                     </li>
                 </ul>
                 <ul class="sort-arrows">
@@ -127,7 +127,7 @@
             <article class="catalog-item">
                 <div class="catalog-item-description">
                     <h1>
-                        <a href="#">
+                        <a class="catalog-item-title" href="#">
                             Sedona
                         </a>
                     </h1>
@@ -143,7 +143,7 @@
             <article class="catalog-item">
                 <div class="catalog-item-description">
                     <h1>
-                        <a href="#">
+                        <a class="catalog-item-title" href="#">
                             Pink App
                         </a>
                     </h1>
@@ -159,7 +159,7 @@
             <article class="catalog-item">
                 <div class="catalog-item-description">
                     <h1>
-                        <a href="#">
+                        <a class="catalog-item-title" href="#">
                             Barbershop
                         </a>
                     </h1>
@@ -175,7 +175,7 @@
             <article class="catalog-item">
                 <div class="catalog-item-description">
                     <h1>
-                        <a href="#">
+                        <a class="catalog-item-title" href="#">
                             Mishka
                         </a>
                     </h1>
@@ -191,7 +191,7 @@
             <article class="catalog-item">
                 <div class="catalog-item-description">
                     <h1>
-                        <a href="#">
+                        <a class="catalog-item-title" href="#">
                             A Plus
                         </a>
                     </h1>
@@ -207,7 +207,7 @@
             <article class="catalog-item">
                 <div class="catalog-item-description">
                     <h1>
-                        <a href="#">
+                        <a class="catalog-item-title" href="#">
                             Кваст
                         </a>
                     </h1>
@@ -271,5 +271,4 @@
         <span class="modal-close">x</span>
     </section>
 </body>
-
 </html>
