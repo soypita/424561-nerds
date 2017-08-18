@@ -4,13 +4,22 @@ body {
     color: #283136;
 }
 
-.site-navigation a {
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.site-navigation a,
+.shop-cart a {
     color: #000000;
 }
 
-.shop-cart {
-    color: #000000;
-}
 
 .slider-title h2 {
     font-size: 55px;
