@@ -2,13 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,700i&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <title>HTML Academy: Нёрдс</title>
 </head>
 <body>
     <header class="main-header">
-        <nav class="main-navigator">
+        <nav class="main-navigation">
             <a class="main-header-logo">
                 <img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип Нёрдс">
             </a>
@@ -33,7 +34,7 @@
             <div class="slider-title">
                 <h2>Долго, дорого, скурпулезно</h2>
                 <p>Математически выверенный дизайн для вашего сайта или приложения.</p>
-                <a href="#">Узнать больше</a>
+                <a class="button" href="#">Узнать больше</a>
             </div>
             <img src="img/slider1.png" width="698" height="413" alt="Пример работы">
         </div>
@@ -41,7 +42,7 @@
             <div class="slider-title">
                 <h2>Любим математику как никто другой</h2>
                 <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
-                <a href="#">Узнать больше</a>
+                <a class="button" href="#">Узнать больше</a>
             </div>
             <img src="img/slider2.png" width="663" height="430" alt="Пример работы">
         </div>
@@ -49,7 +50,7 @@
             <div class="slider-title">
                 <h2>Только ночь, только хардкор</h2>
                 <p>Работать днем как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
-                <a href="#">Узнать больше</a>
+                <a class="button" href="#">Узнать больше</a>
             </div>
             <img src="img/slider3.png" width="759" height="411" alt="Пример работы">
         </div>
@@ -61,17 +62,17 @@
         <h1 class="visually-hidden">Студия Нёрдс</h1>
         <section class="nerds-services">
             <h2 class="visually-hidden">Наши услуги</h2>
-            <div class="service-item">
+            <div class="service-item-web">
                 <h3>Веб-сайты</h3>
                 <p class="nerds-service-description">Мир никогда не будет прежним после того как увидит ваш сайт!</p>
                 <a class="button" href="#">Заказать</a>
             </div>
-            <div class="service-item">
+            <div class="service-item-app">
                 <h3>Приложения</h3>
                 <p class="nerds-service-description">Покорите топ-10 приложений в AppStore и Google Play!</p>
                 <a class="button" href="#">Заказать</a>
             </div>
-            <div class="service-item">
+            <div class="service-item-present">
                 <h3>Презентации</h3>
                 <p class="nerds-service-description">Покорите топ-10 приложений в AppStore и Google Play!</p>
                 <a class="button" href="#">Заказать</a>
@@ -82,8 +83,8 @@
             <div class="about">
                 <p class="about-title">Мы — маленькая, но гордая дизайн-студия из Краснодара.</p>
                 <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем непокладая рук, как роботы</p>
-                <div class="service-list">
-                    <b class="service-list-title">Выполняем заказы на разработку:</b>
+                <div class="tasks-list">
+                    <b class="tasks-list-title">Выполняем заказы на разработку:</b>
                     <ul>
                         <li>Веб-сайтов любой сложности</li>
                         <li>Мобильных приложений для IOS и Android</li>
@@ -139,8 +140,8 @@
         <div class="adress">
             <h3>Nёrds design studio</h3>
             <p>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-            <p>Телефон: +7 (812) 666-02-66</p>
-            <a href="#">Как нас найти?</a>
+            <p>тел. +7 (812) 275-75-75</p>
+            <a class="button" href="#">Напишите нам</a>
         </div>
         <div class="map-marker"></div>
     </section>
@@ -165,7 +166,7 @@
             </p>
             <p class="email">
                 <label>Ваш e-mail:
-                    <input type="text" name="email" placeholder="Для отправки ответа">
+                    <input type="email" name="email" placeholder="Для отправки ответа">
                 </label>
             </p>
             <p class="text">
