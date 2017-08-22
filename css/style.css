@@ -61,7 +61,9 @@ a {
 .user-navigation a:active {
     color: #a6a6a6;
 }
-
+.site-navigation-current {
+    border-bottom: solid 1px #fb565a;
+}
 .button {
     height: 50px;
     line-height: 18px;
@@ -374,7 +376,7 @@ a {
 .pagination-item a:focus {
     background-color: #dfdfdf;
 }
-s
+
 .pagination-item a:active {
     color: #959595;
     background-color: #d5d5d5;
