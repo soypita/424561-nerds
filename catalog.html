@@ -7,7 +7,6 @@
     <link href="css/style.css" rel="stylesheet">
     <title>Nёrds-Shop</title>
 </head>
-
 <body>
     <header class="main-header">
         <nav class="main-navigation">
@@ -34,13 +33,18 @@
             <form class="filter" method="get" action="https://echo.htmlacademy.ru">
                 <fieldset>
                     <legend class="filter-title">Стоймость:</legend>
-                    <div class="price-selector"></div>
-                    <label>От
-                        <input class="price-field" type="number" name="min-price" value="0">
-                    </label>
-                    <label>До
-                        <input class="price-field" type="number" name="min-price" value="15000">
-                    </label>
+                    <div class="price-selector">
+                        <div class="selector-wrapper">
+                        <div class="price-selector-current-progress"></div>
+                        <div class="price-selector-bar"></div>
+                        <div class="price-selector-setter min"></div>
+                        <div class="price-selector-setter max"></div>
+                        </div>
+                    <label for="min-price-field">От</label>
+                        <input class="price-field" type="text" name="min-price" value="0" id="min-price-field">
+                    <label for="max-price-field">До</label>
+                        <input class="price-field" type="text" name="max-price" value="15000" id="max-price-field">
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend class="filter-title">Сетка:</legend>

@@ -61,9 +61,11 @@ a {
 .user-navigation a:active {
     color: #a6a6a6;
 }
+
 .site-navigation-current {
-    border-bottom: solid 1px #fb565a;
+    border-bottom: solid 2px #fb565a;
 }
+
 .button {
     height: 50px;
     line-height: 18px;
@@ -74,6 +76,8 @@ a {
     border: none;
     text-transform: uppercase;
     background-color: #fb565a;
+    border-radius: 2px;
+    outline: none;
 }
 
 .button:hover,
@@ -84,6 +88,7 @@ a {
 .button:active {
     background-color: #d7373b;
     color: #e26c6e;
+    box-shadow: inset 0 3px 0 0 #c13135;
 }
 
 .slider-title h2 {
@@ -120,6 +125,7 @@ a {
 .service-item-app .button:active {
     color: #4dc491;
     background-color: #00aa62;
+    box-shadow: inset 0 3px 0 0 #009958;
 }
 
 .service-item-present .button {
@@ -134,6 +140,7 @@ a {
 .service-item-present .button:active {
     color: #edc265;
     background-color: #e5a722;
+    box-shadow: inset 0 3px 0 0 #ce961f;
 }
 
 .about-title {
@@ -159,6 +166,11 @@ a {
     text-transform: uppercase;
 }
 
+.statistics th {
+    line-height: 18px;
+    font-weight: 400px;
+}
+
 .statistics td {
     font-size: 45px;
     font-weight: 700;
@@ -182,6 +194,31 @@ a {
     opacity: 0.1;
 }
 
+.contacts {
+    width: 1440px;
+    height: 416px;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    background-color: #f1efe8;
+}
+
+.contacts::before {
+    content: "";
+    overflow: hidden;
+    display: block;
+}
+
+.adress {
+    width: 270px;
+    height: 251px;
+    padding-top: 57px;
+    padding-left: 50px;
+    margin-top: 54px;
+    margin-left: 140px;
+    background-color: #ffffff;
+}
+
 .adress h3 {
     font-size: 18px;
     line-height: 30px;
@@ -192,6 +229,15 @@ a {
 
 .adress p {
     line-height: 18px;
+}
+
+.map-marker {
+    position: relative;
+    top: -270px;
+    left: 819px;
+    width: 231px;
+    height: 190px;
+    background-image: url("../img/map-marker.png");
 }
 
 .footer-social h3 {
@@ -222,20 +268,33 @@ a {
     color: #000000;
 }
 
+.modal-writeus input {
+    width: 360px;
+    height: 50px;
+}
+
+.modal-writeus textarea {
+    width: 760px;
+    height: 120px;
+}
+
 .modal-writeus input,
 .modal-writeus textarea {
+    padding-left: 14px;
     outline: none;
-    opacity: 0.8;
+    opacity: 0.6;
 }
 
 .modal-writeus input:hover,
 .modal-writeus textarea:hover {
-    opacity: 1;
+    opacity: 0.8;
 }
 
 .modal-writeus input:focus,
 .modal-writeus textarea:focus {
-    border: solid 2px #000000;
+    outline: solid 2px #000000;
+    color: #444444;
+    opacity: 1;
 }
 
 .modal-writeus input:invalid {
@@ -262,6 +321,67 @@ a {
 
 .filter fieldset {
     border: none;
+}
+
+.selector-wrapper {
+    width: 260px;
+    height: 80px;
+    background-color: #eeeeee;
+    margin-bottom: 14px;
+}
+
+.price-selector-current-progress {
+    position: relative;
+    height: 2px;
+    width: 150px;
+    background-color: #00ca74;
+    top: 38px;
+    left: 30px;
+}
+
+.price-selector-bar {
+    position: relative;
+    height: 2px;
+    width: 69px;
+    background-color: #d7dcde;
+    top: 36px;
+    left: 168px;
+}
+
+.price-selector-setter {
+    position: relative;
+    width: 4px;
+    height: 4px;
+    border: 8px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ababab;
+    cursor: pointer;
+    box-shadow: 0 2px 0 0 #cccdcd;
+}
+
+.price-selector-setter.min {
+    top: 25px;
+    left: 18px;
+}
+
+.price-selector-setter.max {
+    top: 5px;
+    left: 160px;
+}
+
+.price-selector label {
+    line-height: 22px;
+    text-transform: uppercase;
+}
+
+.price-field {
+    background-color: #eeeeee;
+    border: 0;
+    width: 80px;
+    height: 38px;
+    font: inherit;
+    color: inherit;
+    text-align: center;
 }
 
 .filter ul {
@@ -293,6 +413,7 @@ a {
 .filter-button:active {
     color: #959595;
     background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 
 .filter-input:hover+label,
@@ -337,16 +458,18 @@ a {
     color: #000000;
 }
 
+.catalog-item-description {
+    width: 360px;
+    height: 231px;
+    text-align: center;
+    background-color: #eeeeee;
+}
+
 .catalog-item-title {
     font-size: 18px;
     line-height: 30px;
     color: #000000;
     text-transform: uppercase;
-}
-
-.catalog-item-description {
-    text-align: center;
-    background-color: #eeeeee;
 }
 
 .catalog-item-price .button:hover,
@@ -370,6 +493,7 @@ a {
 
 .pagination-item-current a {
     background-color: #ffffff;
+    border: solid 3px #eeeeee;
 }
 
 .pagination-item a:hover,
@@ -380,4 +504,5 @@ a {
 .pagination-item a:active {
     color: #959595;
     background-color: #d5d5d5;
+    box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
