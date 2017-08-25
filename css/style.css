@@ -501,11 +501,6 @@ sup {
 
 /*сеточки*/
 
-html, body {
-  min-width: 1440px;
-  min-height: 2476px;
-}
-
 .container {
   width: 1200px;
   margin: 0 auto;
