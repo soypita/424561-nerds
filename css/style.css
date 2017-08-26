@@ -62,9 +62,11 @@ a {
 .button {
   font-weight: 500;
   line-height: 18px;
-  height: 50px;
+  display: inline-block;
+  width: 240px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   text-align: center;
-  vertical-align: middle;
   text-transform: uppercase;
   color: #fff;
   border: none;
@@ -81,6 +83,10 @@ a {
   color: #e26c6e;
   background-color: #d7373b;
   box-shadow: inset 0 3px 0 0 #c13135;
+}
+
+.slider-content:nth-of-type(2), .slider-content:nth-of-type(3) {
+  display: none;
 }
 
 .slider-title h2 {
@@ -101,6 +107,7 @@ a {
 .nerds-services a {
   font-weight: 500;
   line-height: 18px;
+  width: 160px;
   text-transform: uppercase;
   color: #fff;
 }
@@ -193,13 +200,18 @@ a {
 }
 
 .contacts {
-  width: 1440px;
+  width: 100%;
   height: 416px;
   margin: 0 auto;
   background-color: #f1efe8;
   background-image: url('../img/map.jpg');
   background-repeat: no-repeat;
+  background-position: center;
   background-size: auto auto;
+}
+
+.contacts .button {
+  width: 220px;
 }
 
 .contacts::before {
@@ -452,6 +464,7 @@ a {
 }
 
 .catalog-item-description {
+  display: none;
   width: 360px;
   height: 231px;
   text-align: center;
