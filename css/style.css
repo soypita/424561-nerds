@@ -12,6 +12,11 @@ a {
   text-decoration: none;
   outline: none;
 }
+/*// TODO автопрефиксер*/
+img {
+  max-width: 100%;
+  height: auto;
+}
 
 .visually-hidden {
   position: absolute;
@@ -96,6 +101,7 @@ a.button {
   font-size: 55px;
   font-weight: 500;
   line-height: 55px;
+  margin-bottom: 24px;
   color: #000;
 }
 
@@ -300,7 +306,7 @@ a.button {
 .adress p:nth-of-type(1) {
   line-height: 18px;
   width: 207px;
-  padding-top: 3px;
+  padding-top: 5px;
 }
 
 .adress p:nth-of-type(2) {
@@ -324,6 +330,8 @@ a.button {
   font-size: 36px;
   font-weight: 700;
   line-height: 36px;
+  padding-top: 3px;
+  margin-bottom: 0;
   color: #000;
 }
 
@@ -611,23 +619,27 @@ a.button {
 }
 
 .site-navigation {
+  display: flex;
+  flex-wrap: wrap;
   width: auto;
   margin: 0;
   margin-top: 75px;
   padding: 0;
-  white-space: nowrap;
 }
 
 .site-navigation li {
-  display: inline-block;
   margin: 0;
-  margin-right: 45px;
+  margin-right: 50px;
   padding: 0;
 }
 
+.site-navigation li:nth-child(3) {
+  margin-left: -5px;
+  margin-right: 55px;
+}
 .site-navigation li:nth-child(4) {
   margin-right: 0;
-  margin-left: -5px;
+  margin-left: -10px;
 }
 
 .user-navigation {
@@ -656,23 +668,30 @@ a.button {
 
 .nerds-slider .container {
   display: flex;
-  margin-top: -46px;
+  position: relative;
+}
+
+.slider-input-wrapper {
+  position: absolute;
+  top: 360px;
+  left: 557px;
 }
 
 .slider-content {
   display: flex;
   align-self: flex-end;
   justify-content: space-between;
+
 }
 
 .slider-title {
   width: 420px;
-  padding-top: 80px;
+  padding-top: 32px;
+
 }
 
 .slider-title p {
   width: 360px;
-  margin-top: -25px;
   margin-bottom: 40px;
   word-wrap: normal;
 }
@@ -680,8 +699,9 @@ a.button {
 .slider-content img {
   width: 698px;
   height: 413px;
-  margin-top: 65px;
   margin-left: 10px;
+  padding-top: 17px;
+
 }
 
 .nerds-services {
@@ -704,11 +724,12 @@ a.button {
 }
 
 .service-item-web h3 {
-  margin-bottom: -2px;
+  margin-bottom: 0px;
 }
 
 .service-item-web p {
   width: 250px;
+  margin-top: 15px;
   margin-bottom: 34px;
 }
 
@@ -722,11 +743,12 @@ a.button {
 }
 
 .service-item-app h3 {
-  margin-bottom: -2px;
+  margin-bottom: 0px;
 }
 
 .service-item-app p {
   width: 250px;
+  margin-top: 15px;
   margin-bottom: 34px;
 }
 
@@ -739,11 +761,12 @@ a.button {
 }
 
 .service-item-present h3 {
-  margin-bottom: -2px;
+  margin-bottom: 0px;
 }
 
 .service-item-present p {
   width: 250px;
+  margin-top: 15px;
   margin-bottom: 34px;
 }
 
@@ -763,25 +786,26 @@ a.button {
 
 .tasks-list ul {
   margin: 0;
-  margin-top: 21px;
+  margin-top: 23px;
   padding: 0;
 }
 
 .tasks-list li {
+  position: relative;
+  padding-left: 34px;
   margin-bottom: 24px;
-  padding-left: 36px;
 }
 
 .tasks-list li::before {
   display: inline-block;
+  position: absolute;
   width: 24px;
   height: 16px;
-  margin-top: -5px;
   margin-right: 10px;
-  margin-left: -34px;
   content: '';
-  vertical-align: top;
-  border-bottom: 2px solid #fb565a;
+  left: 2px;
+  top:12px;
+  border-top: 2px solid #fb565a;
 }
 
 .about {
@@ -799,7 +823,7 @@ a.button {
 
 .nerds-logo {
   margin-top: 8px;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .statistics-results {
@@ -810,9 +834,8 @@ a.button {
 .partners {
   display: flex;
   width: 1160px;
-  height: 181px;
   margin: 0 auto;
-  margin-top: 52px;
+  margin-top: 50px;
   margin-bottom: 80px;
   border-top: 2px solid #eee;
   border-bottom: 2px solid #eee;
@@ -820,9 +843,10 @@ a.button {
 
 .partners ul {
   display: flex;
+  flex-wrap: wrap;
   width: auto;
   margin: 0;
-  padding: 0;
+  padding: 40px 0;
   padding-left: 30px;
   list-style: none;
   align-self: center;
@@ -834,7 +858,7 @@ a.button {
   align-self: center;
 }
 
-.partners li:not(:first-child)::before {
+.partners li:not(:last-child)::after {
   position: absolute;
   display: inline-block;
   width: 2px;
@@ -843,31 +867,32 @@ a.button {
   background-color: #eee;
 }
 
-.partners li:nth-of-type(2)::before {
-  top: 20px;
-  left: -45px;
+.partners li:nth-of-type(1)::after {
+  top: 18px;
+  right: 43px;
 }
 
-.partners li:nth-of-type(3)::before {
-  left: -57px;
+.partners li:nth-of-type(2)::after {
+  right:  56px;
+  top: 18px;
 }
 
-.partners li:nth-of-type(4)::before {
-  top: 20px;
-  left: -65px;
+.partners li:nth-of-type(3)::after {
+  top: 0;
+  right: 62px;
 }
 
 .partners li:nth-child(1) {
-  margin-right: 95px;
+  padding-right: 95px;
   padding-top: 15px;
 }
 
 .partners li:nth-child(2) {
-  margin-right: 104px;
+  padding-right: 104px;
 }
 
 .partners li:nth-child(3) {
-  margin-right: 121px;
+  padding-right: 121px;
 }
 
 .partners li:nth-child(4) {
@@ -887,36 +912,78 @@ a.button {
 
 .social-webs li {
   display: inline-block;
+  margin-top: 16px;
   margin-right: 8px;
 }
 
 .social-button {
-  font-size: 0;
   display: block;
+  position: relative;
   width: 78px;
   height: 78px;
   border-radius: 50%;
   background-color: #e1e1e1;
 }
 
-.social-button-vk {
+.social-button:hover,
+.social-button:focus {
+  background-color: #e74246;
+}
+
+.social-button:active {
+  background-color: #d7373b;
+  box-shadow: inset 0 3px 0 0 #c13135;
+}
+
+.social-button-vk::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 23px;
+  left: 24px;
   background-image: url('../img/vk-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.social-button-fb {
+.social-button-vk:active::before {
+  opacity: 0.3;
+}
+
+.social-button-fb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 23px;
+  left: 24px;
   background-image: url('../img/fb-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.social-button-inst {
+.social-button-fb:active::before {
+  opacity: 0.3;
+}
+
+.social-button-inst::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 23px;
+  left: 24px;
   background-image: url('../img/insta-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.social-button-inst:active::before {
+  opacity: 0.3;
+}
 .footer-social-title {
   width: 560px;
   margin-top: 35px;
@@ -925,11 +992,13 @@ a.button {
 }
 
 .footer-social-title p {
-  margin-top: -25px;
+  margin-top: 10px;
 }
 
+/*TODO don't forget to hidden*/
 .modal-writeus {
   margin-left: 120px;
+  display: none;
 }
 
 .modal-writeus form {
