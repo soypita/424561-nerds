@@ -93,10 +93,6 @@ a.button {
   box-shadow: inset 0 3px 0 0 #c13135;
 }
 
-.slider-content:nth-of-type(2), .slider-content:nth-of-type(3) {
-  display: none;
-}
-
 .slider-title h2 {
   font-size: 55px;
   font-weight: 500;
@@ -595,9 +591,9 @@ a.button {
 /*сеточки*/
 
 
-/*body {
+body {
   min-width: 1440px;
-}*/
+}
 
 .container {
   width: 1160px;
@@ -667,25 +663,72 @@ a.button {
 }
 
 .nerds-slider .container {
-  display: flex;
   position: relative;
 }
 
-.slider-input-wrapper {
+.nerds-slider input[type=radio] {
   position: absolute;
+  opacity: 0;
   top: 360px;
   left: 557px;
 }
+.slider-controls {
+  position: absolute;
+  top: 316px;
+  left: 550px;
+}
 
+.slider-controls label{
+    display:inline-block;
+    width: 12px;
+    height: 12px;
+    margin:0 6px;
+    background:white;
+    border:3px solid white;
+    vertical-align:top;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#slider1:checked ~ .slider-controls label[for="slider1"],
+#slider2:checked ~ .slider-controls label[for="slider2"],
+#slider3:checked ~ .slider-controls label[for="slider3"] {
+    background: radial-gradient(#ffffff, #ffffff  2px, #c1c1c1 3px, #ffffff 4px);
+
+}
 .slider-content {
-  display: flex;
-  align-self: flex-end;
-  justify-content: space-between;
+  display: none;
+  min-height: 430px;
+}
 
+.slider-content:nth-child(1) {
+  background-image: url(../img/slider1.png);
+  background-repeat: no-repeat;
+  background-position: 430px 16px;
+}
+
+.slider-content:nth-child(2) {
+  background-image: url(../img/slider2.png);
+  background-repeat: no-repeat;
+  background-position: 495px 0px;
+}
+.slider-content:nth-child(3) {
+  background-image: url(../img/slider3.png);
+  background-repeat: no-repeat;
+  background-position: 398px 18px;
+}
+#slider1:checked ~ .slides .slider-content:nth-child(1) {
+  display: block;
+}
+#slider2:checked ~ .slides .slider-content:nth-child(2) {
+  display: block;
+}
+#slider3:checked ~ .slides .slider-content:nth-child(3) {
+  display: block;
 }
 
 .slider-title {
-  width: 420px;
+  width: 514px;
   padding-top: 32px;
 
 }
@@ -697,10 +740,9 @@ a.button {
 }
 
 .slider-content img {
-  width: 698px;
-  height: 413px;
   margin-left: 10px;
   padding-top: 17px;
+  height: initial;
 
 }
 
