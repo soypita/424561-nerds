@@ -350,6 +350,10 @@ a.button {
   font-weight: 700;
   line-height: 45px;
   color: #000;
+  padding: 0;
+  margin: 0;
+  margin-top: 68px;
+  margin-left: 98px;
 }
 
 .modal-writeus label {
@@ -360,12 +364,14 @@ a.button {
 
 .modal-writeus input {
   width: 343px;
-  height: 50px;
+  height: 43px;
+  margin-top: 8px;
 }
 
 .modal-writeus textarea {
   width: 743px;
-  height: 120px;
+  height: 110px;
+  margin-top: 8px;
 }
 
 .modal-writeus input, .modal-writeus textarea {
@@ -394,6 +400,23 @@ a.button {
   resize: none;
 }
 
+.modal-close {
+  position: relative;
+  background: inherit;
+}
+
+.modal-close::before {
+  content: "";
+  position: absolute;
+  width: 21px;
+  height: 21px;
+  bottom: 0px;
+  z-index: 2;
+  left: 0;
+  background-image: url("../img/close-cross.svg");
+  background-repeat: no-repeat;
+}
+
 .page-title {
   font-size: 55px;
   font-weight: 700;
@@ -404,6 +427,7 @@ a.button {
 
 .modal-writeus .button {
   width: 260px;
+  margin-left: 100px;
 }
 
 .filter fieldset {
@@ -625,10 +649,14 @@ a.button {
   color: #959595;
   background-color: #d5d5d5;
   box-shadow: inset 0 3px 0 0 #bfbfbf;
+  border-color: #dfdfdf;
+
 }
 
 .pagination-item a:hover, .pagination-item a:focus {
   background-color: #dfdfdf;
+  border-color: #dfdfdf;
+
 }
 
 .pagination-item-current a {
@@ -638,6 +666,7 @@ a.button {
   background-color: #fff;
 }
 
+
 .paginator-item-next a {
   min-width: 260px;
   text-transform: uppercase;
@@ -646,9 +675,10 @@ a.button {
 
 /*сеточки*/
 
-/*body {
+body {
   min-width: 1440px;
-}*/
+  /*width: 1200px;*/
+}
 
 .container {
   width: 1160px;
@@ -714,13 +744,24 @@ a.button {
   margin-top: 5px;
 }
 
-.user-navigation .shop-cart::before {
-  display: inline-block;
+.user-navigation a {
+  display: block;
+  padding-bottom: 3px;
+  position: relative;
+  padding-left: 36px;
+}
+
+.user-navigation a::before {
+  display: block;
+  position: absolute;
   width: 15px;
   height: 15px;
   margin-right: 20px;
-  content: '';
+  left: 0;
+  top: 7px;
+  content: "";
   background-image: url('../img/cart-icon.svg');
+  background-repeat: no-repeat;
 }
 
 .nerds-slider .container {
@@ -1101,29 +1142,45 @@ a.button {
 
 
 /*TODO don't forget to hidden*/
+.modal.container {
+  position: relative;
+}
 
 .modal-writeus {
-  display: none;
+  position: absolute;
+  width: 960px;
+  z-index: 99;
+  left: 0;
+  bottom: 187px;
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
   margin-left: 120px;
 }
 
 .modal-writeus form {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .modal-writeus .name {
   width: 360px;
-  margin-right: 40px;
+  margin-right: 0;
+  margin-left: auto;
 }
 
 .modal-writeus .email {
   width: 360px;
+  margin-left: 40px;
+  margin-right: auto;
 }
 
 .modal-writeus .text {
   width: 760px;
-  margin-right: 220px;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 30px;
 }
 
 .page-title {
