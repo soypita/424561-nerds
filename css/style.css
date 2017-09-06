@@ -475,12 +475,6 @@ a.button
     list-style: none;
 }
 
-.modal-show
-{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-}
 
 .modal-writeus
 {
@@ -488,23 +482,26 @@ a.button
     z-index: 99;
     bottom: 115px;
     left: 0;
-    /*display: none;*/
-
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-        flex-direction: column;
+    display: none;
 
     width: 960px;
     margin-left: 120px;
 
-    background-color: #eee;
+    background-color: #ffffff;
     -webkit-box-shadow: 0 21px 60px 4px;
             box-shadow: 0 21px 60px 4px;
 
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
+}
+
+.modal-show
+{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+      flex-direction: column;
 }
 
 .modal-writeus form
@@ -637,7 +634,7 @@ a.button
     opacity: .3;
     border: none;
     outline: none;
-    background-color: #eee;
+    background-color: #ffffff;
     background-image: url('../img/close-cross.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -761,6 +758,7 @@ a.button
     color: inherit;
     border: 0;
     background-color: #eee;
+    outline: none;
 }
 
 .price-field:last-child
@@ -874,7 +872,8 @@ a.button
 .sort-options li
 {
     min-width: 60px;
-    margin-right: 25px;
+    margin-right: 14px;
+    margin-left: 11px;
 }
 
 .sort-options li:last-child
@@ -934,7 +933,7 @@ a.button
 
     width: 760px;
     margin-bottom: 59px;
-    margin-left: 47px;
+    margin-left: 46px;
 
     list-style: none;
 
@@ -944,7 +943,7 @@ a.button
 
 .pagination-item
 {
-    margin-top: 5px;
+    margin-top: 2px;
     margin-right: 10px;
 }
 
@@ -961,8 +960,24 @@ a.button
     vertical-align: middle;
 
     color: #000;
+
     border-radius: 3px;
+
     background-color: #eee;
+}
+
+.pagination-item-current a
+{
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 3px #dbdbdb;
+}
+
+
+.pagination-item a:hover,
+.pagination-item a:focus
+{
+    background-color: #dfdfdf;
+    box-shadow: none;
 }
 
 .pagination-item a:active
@@ -974,28 +989,11 @@ a.button
             box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus
-{
-    border-color: #dfdfdf;
-    background-color: #dfdfdf;
-}
-
-.pagination-item-current a
-{
-    line-height: 44px;
-
-    min-height: 44px;
-
-    border: solid 3px #eee;
-    background-color: #fff;
-}
-
 
 .paginator-item-next a
 {
-    min-width: 260px;
-
+    min-width: 262px;
+    margin-left: 3px;
     text-transform: uppercase;
 }
 
@@ -1079,8 +1077,8 @@ a.button
 
     width: 180px;
     margin: 0;
-    margin-top: 70px;
-    margin-left: 177px;
+    margin-top: 69px;
+    margin-left: 180px;
     padding: 0;
 
     -webkit-box-pack: end;
@@ -1102,7 +1100,7 @@ a.button
     display: block;
 
     padding-bottom: 3px;
-    padding-left: 36px;
+    padding-left: 40px;
 }
 
 .user-navigation a::before
@@ -1823,8 +1821,7 @@ a.button
 
     width: 760px;
     margin: 0 auto;
-    margin-top: 3px;
-    margin-left: 90px;
+    margin-left: 87px;
     padding: 0;
 
     -webkit-box-pack: justify;
@@ -1851,7 +1848,7 @@ a.button
 
 .sort-options
 {
-    width: 290px;
+    width: 310px;
 }
 
 .sort-arrows li
@@ -1921,10 +1918,10 @@ a.button
 
     width: 760px;
     margin: 0 auto;
-    margin-bottom: 15px;
+    margin-bottom: 28px;
     padding: 0;
     padding-top: 20px;
-    padding-left: 85px;
+    padding-left: 87px;
 
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -1954,13 +1951,14 @@ a.button
 {
     position: relative;
 
-    padding-top: 38px;
+    padding-top: 42px;
+    margin-bottom: 9px;
 }
 
 .catalog-item-image::before
 {
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 0;
 
     width: 360px;
@@ -1988,7 +1986,7 @@ a.button
 {
     position: absolute;
     z-index: 1;
-    bottom: 20px;
+    bottom: 15px;
 
     width: 360px;
     min-height: 230px;
@@ -2001,8 +1999,8 @@ a.button
 
 .catalog-item-description h1
 {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 27px;
+    margin-bottom: 11px;
 }
 
 .catalog-item:hover .catalog-item-description,
@@ -2021,7 +2019,7 @@ a.button
 
     max-width: 200px;
     margin: 0 auto;
-    margin-bottom: 25px;
+    margin-bottom: 33px;
 }
 
 .catalog-item:nth-of-type(2) .catalog-item-promo
