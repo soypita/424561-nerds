@@ -1163,22 +1163,26 @@ a.button
 .slider-controls label::before
 {
     position: absolute;
+    content: "";
 
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
 
-    border: 2px solid #fff;
+    left: 2px;
+    top: 2px;
+
+    border: 2px solid #c1c1c1;
     border-radius: 50%;
     background: #fff;
+
+    opacity: 0;
 }
 
-#slider1:checked ~ .slider-controls label[for='slider1'],
-#slider2:checked ~ .slider-controls label[for='slider2'],
-#slider3:checked ~ .slider-controls label[for='slider3']
+#slider1:checked ~ .slider-controls label[for='slider1']::before,
+#slider2:checked ~ .slider-controls label[for='slider2']::before,
+#slider3:checked ~ .slider-controls label[for='slider3']::before
 {
-    background: -webkit-radial-gradient(#fff, #fff 2px, #c1c1c1 3px, #fff 4px);
-    background:      -o-radial-gradient(#fff, #fff 2px, #c1c1c1 3px, #fff 4px);
-    background:         radial-gradient(#fff, #fff 2px, #c1c1c1 3px, #fff 4px);
+  opacity: 1;
 }
 
 .slider-content
