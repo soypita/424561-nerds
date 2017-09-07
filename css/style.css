@@ -18,9 +18,6 @@ a
     outline: none;
 }
 
-
-/*// TODO автопрефиксер*/
-/*Сделать кнопки не радиальными градиентами а псевдоэлементами*/
 img
 {
     max-width: 100%;
@@ -100,11 +97,13 @@ img
 
     display: inline-block;
 
-    width: 240px;
+    width: 220px;
     min-height: 50px;
 
+    padding: 0 10px;
     text-align: center;
     text-transform: uppercase;
+    word-wrap: break-word;
 
     color: #fff;
     border: none;
@@ -141,6 +140,7 @@ a.button
     line-height: 55px;
 
     margin-bottom: 24px;
+    word-wrap: break-word;
 
     color: #000;
 }
@@ -161,7 +161,9 @@ a.button
     font-weight: 500;
     line-height: 18px;
 
-    width: 160px;
+    width: 140px;
+
+    padding: 0 10px;
 
     text-transform: uppercase;
 
@@ -269,14 +271,6 @@ a.button
     background-repeat: no-repeat;
 }
 
-.about-title
-{
-    font-size: 45px;
-    font-weight: 500;
-    line-height: 45px;
-
-    color: #000;
-}
 
 .tasks-list-title
 {
@@ -285,6 +279,8 @@ a.button
     text-transform: uppercase;
 
     color: #000;
+
+    word-wrap: break-word;
 }
 
 .tasks-list ul
@@ -300,9 +296,16 @@ a.button
 
     text-transform: uppercase;
 
+    width: 327px;
+
+    word-wrap: break-word;
+
     color: #000;
 }
 
+.statistics table {
+  width: 360px;
+}
 .statistics th
 {
     font-weight: 400px;
@@ -373,6 +376,7 @@ a.button
 .contacts
 {
     position: relative;
+
     width: 100%;
     height: 416px;
     margin: 0 auto;
@@ -384,14 +388,17 @@ a.button
     background-size: auto auto;
 }
 
+.google-map
+{
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
 
-.google-map {
-  position: absolute;
-  z-index: 2;
-  bottom: 0;
+    width: 100%;
+    height: 450px;
 
+    border: 0;
 }
-
 
 .contacts .button
 {
@@ -409,12 +416,14 @@ a.button
 .adress
 {
     position: absolute;
+    z-index: 3;
+
     width: 270px;
     height: 275px;
     margin-top: 54px;
     padding-top: 30px;
     padding-left: 50px;
-    z-index: 3;
+
     background-color: #fff;
 }
 
@@ -486,19 +495,19 @@ a.button
     list-style: none;
 }
 
-
 .modal-writeus
 {
     position: absolute;
     z-index: 99;
     bottom: 115px;
     left: 0;
+
     display: none;
 
     width: 960px;
     margin-left: 120px;
 
-    background-color: #ffffff;
+    background-color: #fff;
     -webkit-box-shadow: 0 21px 60px 4px;
             box-shadow: 0 21px 60px 4px;
 
@@ -507,61 +516,137 @@ a.button
     -ms-flex-direction: column;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(40px);
-  }
-
-  25% {
-    transform: translateY(30px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  75% {
-    transform: translateY(10px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
+@-webkit-keyframes bounce
+{
+    0%
+    {
+        -webkit-transform: translateY(40px);
+                transform: translateY(40px);
+    }
+    25%
+    {
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+    }
+    50%
+    {
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px);
+    }
+    75%
+    {
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
+    }
+    100%
+    {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
 }
 
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
+@keyframes bounce
+{
+    0%
+    {
+        -webkit-transform: translateY(40px);
+                transform: translateY(40px);
+    }
+    25%
+    {
+        -webkit-transform: translateY(30px);
+                transform: translateY(30px);
+    }
+    50%
+    {
+        -webkit-transform: translateY(20px);
+                transform: translateY(20px);
+    }
+    75%
+    {
+        -webkit-transform: translateY(10px);
+                transform: translateY(10px);
+    }
+    100%
+    {
+        -webkit-transform: translate(0);
+                transform: translate(0);
+    }
+}
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-10px);
-  }
+@-webkit-keyframes shake
+{
+    0%,
+    100%
+    {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%
+    {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80%
+    {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+}
 
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(10px);
-  }
-
+@keyframes shake
+{
+    0%,
+    100%
+    {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70%,
+    90%
+    {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60%,
+    80%
+    {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
 }
 
 .modal-show
 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-      flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+        flex-direction: column;
 
-  animation: bounce 0.3s;
+    -webkit-animation: bounce .3s;
+            animation: bounce .3s;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
 }
 
-.modal-error {
-  animation: shake 0.6s;
+.modal-error
+{
+    -webkit-animation: shake .6s;
+            animation: shake .6s;
 }
 
 .modal-writeus form
@@ -665,6 +750,7 @@ a.button
     color: #e74246;
     border: solid 2px #e74246;
 }
+
 .modal-writeus input:invalid::-webkit-input-placeholder
 {
     color: #e74246;
@@ -674,6 +760,7 @@ a.button
 {
     color: #e74246;
 }
+
 .modal-writeus textarea
 {
     overflow: auto;
@@ -694,7 +781,7 @@ a.button
     opacity: .3;
     border: none;
     outline: none;
-    background-color: #ffffff;
+    background-color: #fff;
     background-image: url('../img/close-cross.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -817,8 +904,8 @@ a.button
 
     color: inherit;
     border: 0;
-    background-color: #eee;
     outline: none;
+    background-color: #eee;
 }
 
 .price-field:last-child
@@ -1020,24 +1107,23 @@ a.button
     vertical-align: middle;
 
     color: #000;
-
     border-radius: 3px;
-
     background-color: #eee;
 }
 
 .pagination-item-current a
 {
-  background-color: #ffffff;
-  box-shadow: inset 0 0 0 3px #dbdbdb;
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 0 0 3px #dbdbdb;
+            box-shadow: inset 0 0 0 3px #dbdbdb;
 }
-
 
 .pagination-item a:hover,
 .pagination-item a:focus
 {
     background-color: #dfdfdf;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
 
 .pagination-item a:active
@@ -1049,11 +1135,11 @@ a.button
             box-shadow: inset 0 3px 0 0 #bfbfbf;
 }
 
-
 .paginator-item-next a
 {
     min-width: 262px;
     margin-left: 3px;
+
     text-transform: uppercase;
 }
 
@@ -1223,26 +1309,25 @@ a.button
 .slider-controls label::before
 {
     position: absolute;
-    content: "";
+    top: 2px;
+    left: 2px;
 
     width: 4px;
     height: 4px;
 
-    left: 2px;
-    top: 2px;
+    content: '';
 
+    opacity: 0;
     border: 2px solid #c1c1c1;
     border-radius: 50%;
     background: #fff;
-
-    opacity: 0;
 }
 
 #slider1:checked ~ .slider-controls label[for='slider1']::before,
 #slider2:checked ~ .slider-controls label[for='slider2']::before,
 #slider3:checked ~ .slider-controls label[for='slider3']::before
 {
-  opacity: 1;
+    opacity: 1;
 }
 
 .slider-content
@@ -1299,7 +1384,7 @@ a.button
     width: 360px;
     margin-bottom: 40px;
 
-    word-wrap: normal;
+    word-wrap: break-word;
 }
 
 .slider-content img
@@ -1351,6 +1436,10 @@ a.button
 .service-item-web h3
 {
     margin-bottom: 0;
+
+    width: 138px;
+
+    word-wrap: break-word;
 }
 
 .service-item-web p
@@ -1358,6 +1447,8 @@ a.button
     width: 250px;
     margin-top: 15px;
     margin-bottom: 34px;
+
+    word-wrap: break-word;
 }
 
 .service-item-app
@@ -1384,6 +1475,10 @@ a.button
 .service-item-app h3
 {
     margin-bottom: 0;
+
+    width: 169px;
+
+    word-wrap: break-word;
 }
 
 .service-item-app p
@@ -1391,6 +1486,8 @@ a.button
     width: 250px;
     margin-top: 15px;
     margin-bottom: 34px;
+
+    word-wrap: break-word;
 }
 
 .service-item-present
@@ -1416,6 +1513,10 @@ a.button
 .service-item-present h3
 {
     margin-bottom: 0;
+
+    width: 174px;
+
+    word-wrap: break-word;
 }
 
 .service-item-present p
@@ -1423,6 +1524,8 @@ a.button
     width: 250px;
     margin-top: 15px;
     margin-bottom: 34px;
+
+    word-wrap: break-word;
 }
 
 .description-wrapper
@@ -1440,8 +1543,20 @@ a.button
 .about-title
 {
     margin-bottom: 30px;
-}
 
+    width: 660px;
+
+    word-wrap: break-word;
+
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 45px;
+
+    color: #000;
+}
+.about-title-promo {
+  word-wrap: break-word;
+}
 .tasks-list
 {
     margin-top: 40px;
@@ -1460,6 +1575,8 @@ a.button
 
     margin-bottom: 24px;
     padding-left: 34px;
+
+    word-wrap: break-word;
 }
 
 .tasks-list li::before
@@ -1759,12 +1876,11 @@ a.button
 
 
 /*TODO don't forget to hidden*/
+
 .modal.container
 {
     position: relative;
 }
-
-
 
 .page-title
 {
@@ -2015,8 +2131,8 @@ a.button
 {
     position: relative;
 
-    padding-top: 42px;
     margin-bottom: 9px;
+    padding-top: 42px;
 }
 
 .catalog-item-image::before
