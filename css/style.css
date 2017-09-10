@@ -1269,7 +1269,7 @@ a.button {
   position: absolute;
   z-index: 3;
   width: 270px;
-  height: 275px;
+  min-height: 275px;
   margin-top: 54px;
   padding-top: 30px;
   padding-left: 50px;
